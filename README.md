@@ -1,3 +1,10 @@
+# Azure Function App for Generating JWT Tokens
+
+This Azure Function App is designed to generate JSON Web Tokens (JWT) for authentication purposes in a Qlik Cloud environment. The function is triggered via an HTTP request and generates a JWT using a private key and other environment-specific configurations.
+This documentation provides a detailed overview of the code and how to set up and deploy the Azure Function App to generate JWT tokens for authentication in Qlik Cloud.
+
+## Source and Conversion
+The original script is from this [Qlik Dev documentation](https://qlik.dev/embed/iframe/quickstart/embedding-with-anonymous-access-and-qlik-cloud/#step-3---configure-web-page-variables) which uses AWS Lambda. In this guide, we convert the implementation into an Azure Function App.
 
 ## Create Azure Functions App
 1. Go to [Azure Portal](https://portal.azure.com/#create/Microsoft.FunctionApp)
@@ -22,7 +29,7 @@
    - **kid**
    - **private_key**
 
-   For guidance on obtaining the values for `issuer`, `kid`, and `private_key`, refer to [Configure JWT IdP](https://docs.microsoft.com/en-us/azure/app-service/configure-authentication-provider-jwt).
+   For guidance on obtaining the values for `issuer`, `kid`, and `private_key`, refer to [Configure JWT IdP](https://qlik.dev/embed/iframe/quickstart/embedding-with-anonymous-access-and-qlik-cloud/).
 
 ## Install Azure CLI and Azure Functions Core Tools
 We will deploy the functions to the cloud using Azure Functions Core Tools CLI. Azure CLI will handle authentication during this process.
@@ -59,6 +66,6 @@ We will deploy the functions to the cloud using Azure Functions Core Tools CLI. 
 
 ## Add the URL into the Embed Iframe Code Configuration
 1. Go to the **Embed Iframe Code** section of your application.
-2. In Step 3 - Configure and Embed Iframe Code into the Website, update the `JWTENDPOINT` variable with the Azure Function URL obtained in the previous step.
+2. In [Step 3 - Configure and Embed Iframe Code into the Website](https://qlik.dev/embed/iframe/quickstart/embedding-with-anonymous-access-and-qlik-cloud/#step-3---configure-web-page-variables), update the `JWTENDPOINT` variable with the Azure Function URL obtained in the previous step.
 
 This completes the setup and deployment of your Azure Function App for generating JWT tokens.
