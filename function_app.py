@@ -21,9 +21,6 @@ def http_trigger_qlikcloud_jwt_token(req: func.HttpRequest) -> func.HttpResponse
         kid = os.environ['kid']
 
         new_GUID = str(uuid.uuid4())
-        print(issuer)
-        print(kid)
-        print(kid)
         def create_JWT(private_key, GUID):
             sub = 'ANON\\' + GUID
             name = 'Anonymous'
