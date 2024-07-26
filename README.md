@@ -65,7 +65,11 @@ We will deploy the functions to the cloud using Azure Functions Core Tools CLI. 
 
    Example: `https://azure-qlikcloud-generate-jwt-token.azurewebsites.net/api/http_trigger_qlikcloud_jwt_token`
 4. Open the function URL in a web browser. If you receive the expected response, it indicates that the function is properly configured and operational.
-
+   ```bash
+   {
+       "body": "eyJhbGciOiJ..."
+   }
+    ```
 ## Add the URL into the Embed Iframe Code Configuration
 1. Go to the **Embed Iframe Code** section of your application.
 2. In [Step 3 - Configure and Embed Iframe Code into the Website](https://qlik.dev/embed/iframe/quickstart/embedding-with-anonymous-access-and-qlik-cloud/#step-3---configure-web-page-variables), update the `JWTENDPOINT` variable with the Azure Function URL obtained in the previous step.
