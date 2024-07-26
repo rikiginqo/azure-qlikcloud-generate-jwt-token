@@ -25,6 +25,8 @@ The original script is from this [Qlik Dev documentation](https://qlik.dev/embed
 3. In the Function App, go to **Configuration** under the **Settings** section.
 4. Add the following environment variables:
    - **AzureWebJobsStorage**: Obtain the connection string from your Azure Storage account.
+      - On Azure Portal, open the storage account you want to obtain the connection string for. Select Access keys under the Security + networking section.
+      - You will see two access keys (Key1 and Key2) and the corresponding connection strings for your storage account. Please use any connection string field associated with either Key1 or Key2.
    - **issuer**
    - **kid**
    - **private_key**
