@@ -54,7 +54,7 @@ We will deploy the functions to the cloud using Azure Functions Core Tools CLI. 
 ## Publish the Function App
 1. Execute the following command to publish your Azure Function App to Azure:
     ```bash
-    func azure functionapp publish azure-qlikcloud-generate-jwt-token
+    func azure functionapp publish azure-qlikcloud-generate-jwt-token --python
     ```
 2. Replace `azure-qlikcloud-generate-jwt-token` with your function name if it's different.
 
